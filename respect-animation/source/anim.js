@@ -333,11 +333,19 @@ function renderCard(card, e, fadeOut) {
 }
 
 // ---------------------------------------------------------------- the script
+const FLAGS = [
+  { icon: "FaMobileAlt", text: "Checking your phone or messages without asking" },
+  { icon: "FaUserSlash", text: "Telling you who you can and can't see" },
+  { icon: "FaCommentSlash", text: "Put-downs and “jokes” that hurt" },
+  { icon: "FaSadTear", text: "Making you feel guilty for saying no" },
+  { icon: "FaBolt", text: "Jealousy, anger or threats when you disagree" },
+  { icon: "FaExclamationTriangle", text: "Pressure to “prove” that you care" },
+];
 const RESPECT_C = COL.coral;
 const SCENES = [
   {
     id: "title", bg: "brand", chars: {},
-    beats: [{ d: 5.6, overlay: "title" }],
+    beats: [{ d: 5.6, overlay: "title", who: "N", text: "Respect is the relationship.", nocap: true, voiceDelay: 1.0 }],
   },
   {
     id: "s1", label: "Scene 1 · The question", bg: "courtyard", seatedTable: true,
@@ -457,37 +465,45 @@ const SCENES = [
     beats: [
       { d: 0.6 },
       { who: "N", text: "Sometimes, a relationship can become unhealthy.", overlay: "flagsTitle", d: 3.8 },
-      { d: 14.6, overlay: "flags" },
+      ...[0, 1, 2, 3, 4, 5].map((i) => ({ who: "N", nocap: true, overlay: "flags", flag: i, voiceDelay: 0.35, textFrom: i })),
+      { d: 2.6, overlay: "flags", flag: 6 },
     ],
   },
   {
     id: "end", bg: "brand", chars: {},
-    beats: [{ d: 7.5, overlay: "end" }],
+    beats: [{ d: 7.5, overlay: "end", who: "N", nocap: true, voiceDelay: 0.5, text: "Respect is the relationship. If something doesn't feel right, talk to someone you trust: a friend, family member, teacher or school counsellor." }],
   },
 ];
 
-const FLAGS = [
-  { icon: "FaMobileAlt", text: "Checking your phone or messages without asking" },
-  { icon: "FaUserSlash", text: "Telling you who you can and can't see" },
-  { icon: "FaCommentSlash", text: "Put-downs and “jokes” that hurt" },
-  { icon: "FaSadTear", text: "Making you feel guilty for saying no" },
-  { icon: "FaBolt", text: "Jealousy, anger or threats when you disagree" },
-  { icon: "FaExclamationTriangle", text: "Pressure to “prove” that you care" },
-];
+
 
 // ---------------------------------------------------------------- build timeline
 const BUILT = [];
 const CAPTIONS = [];
+const LINES = [];
+const VOICE_STARTS = [];
+const SFX = [];
+const VOICE = window.VOICE || {};
 let TOTAL = 0;
 for (const sc of SCENES) {
   let t = 0;
   const beats = [];
-  for (const b of sc.beats) {
-    const d = b.d != null ? b.d : readTime(b.text, b.who === "N");
+  sc.beats.forEach((b0, bi) => {
+    const b = { ...b0, id: `${sc.id}_${bi}` };
+    if (b.textFrom != null) b.text = FLAGS[b.textFrom].text;
+    b.voiceDelay = b.voiceDelay != null ? b.voiceDelay : 0.2;
+    const v = b.text && VOICE[b.id];
+    let d = b.d != null ? b.d : b.text ? readTime(b.text, b.who === "N") : 1;
+    if (v) d = b.d != null ? Math.max(b.d, b.voiceDelay + v.dur + 0.3) : b.voiceDelay + v.dur + (b.nocap ? 0.55 : b.who === "N" ? 1.15 : 0.95);
+    b.voiceDur = v ? v.dur : null;
     beats.push({ ...b, t0: t, t1: t + d });
-    if (b.text) CAPTIONS.push({ start: TOTAL + t, end: TOTAL + t + d - 0.15, who: b.who === "N" ? "Narrator" : b.who, text: b.text });
+    if (b.text) {
+      LINES.push({ id: b.id, who: b.who, text: b.text });
+      CAPTIONS.push({ start: TOTAL + t, end: TOTAL + t + d - 0.15, who: b.who === "N" ? "Narrator" : b.who, text: b.text });
+      if (v) VOICE_STARTS.push({ id: b.id, start: TOTAL + t + b.voiceDelay });
+    }
     t += d;
-  }
+  });
   // character keyframes
   const keys = {};
   for (const name of Object.keys(sc.chars)) {
@@ -507,7 +523,11 @@ for (const sc of SCENES) {
     if (b.freeze && freezeAt == null) freezeAt = b.t0;
   }
   if (cur) cards.push(cur);
-  BUILT.push({ ...sc, start: TOTAL, dur: t, beats, keys, cards, freezeAt });
+  const flagTimes = beats.filter((b) => b.flag != null && b.flag < 6).map((b) => b.t0);
+  cards.forEach((c) => SFX.push({ type: "pop", t: TOTAL + c.start }));
+  if (freezeAt != null) SFX.push({ type: "freeze", t: TOTAL + freezeAt });
+  flagTimes.forEach((ft) => SFX.push({ type: "flag", t: TOTAL + ft }));
+  BUILT.push({ ...sc, start: TOTAL, dur: t, beats, keys, cards, freezeAt, flagTimes });
   TOTAL += t;
 }
 
@@ -575,16 +595,16 @@ function overlayFlagsTitle(e) {
   return `<div class="bigtitle" style="top:330px;font-size:150px;color:#fff;opacity:${k};transform:scale(${lerp(0.8, 1, backOut(k)).toFixed(3)})">${icon("FaFlag", `style="width:120px;height:120px;fill:${COL.red};vertical-align:-8px"`)} RED FLAGS</div>
     <div class="bigtitle" style="top:530px;font-size:44px;font-weight:800;color:rgba(255,255,255,.8);${appear(e, 0.7)}">Signs a relationship is becoming unhealthy</div>`;
 }
-function overlayFlags(e) {
+function overlayFlags(e, t, sc) {
   let h = `<div class="bigtitle" style="top:56px;font-size:70px;">${icon("FaFlag", `style="width:58px;height:58px;fill:${COL.red};vertical-align:-4px"`)} RED FLAGS</div>`;
-  const per = 1.75;
   FLAGS.forEach((f, i) => {
     const col = i % 2, row = Math.floor(i / 2);
     const x = 150 + col * 840, y = 200 + row * 228;
-    const k = clamp((e - 0.3 - i * per) / 0.3);
-    const shake = k > 0 && k < 1 ? Math.sin(e * 60) * 6 * (1 - k) : 0;
-    const hl = e - 0.3 - i * per;
-    const glow = hl >= 0 && hl < per ? `box-shadow:0 0 0 6px ${COL.red}, 0 18px 50px rgba(0,0,0,.45);` : "";
+    const ft = sc.flagTimes[i];
+    const nt = i + 1 < sc.flagTimes.length ? sc.flagTimes[i + 1] : Infinity;
+    const k = clamp((t - ft) / 0.3);
+    const shake = k > 0 && k < 1 ? Math.sin(t * 60) * 6 * (1 - k) : 0;
+    const glow = t >= ft && t < nt ? `box-shadow:0 0 0 6px ${COL.red}, 0 18px 50px rgba(0,0,0,.45);` : "";
     h += `<div class="flag" style="left:${x + shake}px;top:${y}px;width:780px;height:190px;opacity:${k};transform:scale(${lerp(0.7, 1, backOut(k)).toFixed(3)});${glow}"><div class="disc">${icon(f.icon)}</div>${esc(f.text)}</div>`;
   });
   return h;
@@ -613,7 +633,9 @@ function render(T) {
   const beat = sc.beats[bi];
   const frozen = sc.freezeAt != null && t >= sc.freezeAt;
   const ct = frozen ? sc.freezeAt : t;
-  const speaker = !frozen && beat.who && beat.who !== "N" && t < beat.t1 - 0.25 && t > beat.t0 + 0.1 ? beat.who : null;
+  const talkEnd = beat.voiceDur != null ? beat.t0 + beat.voiceDelay + beat.voiceDur : beat.t1 - 0.25;
+  const talkStart = beat.voiceDur != null ? beat.t0 + beat.voiceDelay : beat.t0 + 0.1;
+  const speaker = !frozen && beat.who && beat.who !== "N" && t < talkEnd && t > talkStart ? beat.who : null;
 
   // ---- SVG scene
   let svg = `<defs><filter id="blur"><feGaussianBlur stdDeviation="60"/></filter><filter id="freeze"><feColorMatrix type="saturate" values="0.12"/></filter></defs>`;
@@ -637,13 +659,13 @@ function render(T) {
     h += `<div class="pause" style="opacity:${clamp(fe / 0.3)}">${icon("FaPause")}FREEZE FRAME</div>`;
   }
   // overlays (title, flags, end)
-  for (const b of sc.beats) if (b.overlay && t >= b.t0 && t < b.t1) h += OVERLAYS[b.overlay](t - b.t0);
+  for (const b of sc.beats) if (b.overlay && t >= b.t0 && t < b.t1) h += OVERLAYS[b.overlay](b.overlay === "flags" ? t - sc.flagTimes[0] : t - b.t0, t, sc);
   // cards
   for (const c of sc.cards) {
     if (t >= c.start && t < c.end + 0.3) h += renderCard(c.card, t - c.start, t >= c.end ? t - c.end : null);
   }
   // caption
-  if (beat.text && t > beat.t0 + 0.05 && t < beat.t1 - 0.12) {
+  if (beat.text && !beat.nocap && t > beat.t0 + 0.05 && t < beat.t1 - 0.12) {
     const e = t - beat.t0;
     const op = clamp(e / 0.2) * clamp((beat.t1 - 0.12 - t) / 0.15);
     if (beat.who === "N") h += `<div class="cap narr" style="opacity:${op.toFixed(3)}"><span class="who">NARRATOR</span><span class="txt">${esc(beat.text)}</span></div>`;
@@ -658,5 +680,9 @@ function render(T) {
 window.render = render;
 window.TOTAL = TOTAL;
 window.CAPTIONS = CAPTIONS;
+window.LINES = LINES;
+window.VOICE_STARTS = VOICE_STARTS;
+window.SFX = SFX;
+window.SCENE_LIST = BUILT.map((s) => ({ id: s.id, start: s.start, dur: s.dur, bg: s.bg }));
 window.SCENE_STARTS = BUILT.map((s) => ({ id: s.id, label: s.label, start: s.start, dur: s.dur }));
 render(0);

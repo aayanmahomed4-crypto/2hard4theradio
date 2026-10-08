@@ -1,0 +1,451 @@
+{
+ "lines": [
+  {
+   "id": "title_0",
+   "who": "N",
+   "text": "Respect is the relationship."
+  },
+  {
+   "id": "s1_1",
+   "who": "Alex",
+   "text": "Okay, serious question. What actually makes a relationship healthy?"
+  },
+  {
+   "id": "s1_2",
+   "who": "Sam",
+   "text": "Trust?"
+  },
+  {
+   "id": "s1_3",
+   "who": "Maya",
+   "text": "Not arguing all the time?"
+  },
+  {
+   "id": "s1_4",
+   "who": "Jordan",
+   "text": "Being able to be yourself?"
+  },
+  {
+   "id": "s1_5",
+   "who": "Alex",
+   "text": "Exactly. But what does that actually look like?"
+  },
+  {
+   "id": "s1_7",
+   "who": "N",
+   "text": "Relationships aren't just about dating. They include friendships, family relationships, classmates and people we care about."
+  },
+  {
+   "id": "s2_1",
+   "who": "Maya",
+   "text": "Sorry, I don't really feel like coming today."
+  },
+  {
+   "id": "s2_2",
+   "who": "Sam",
+   "text": "That's okay. Maybe another time."
+  },
+  {
+   "id": "s2_4",
+   "who": "N",
+   "text": "First: respect."
+  },
+  {
+   "id": "s2_6",
+   "who": "N",
+   "text": "Respect means understanding that someone else's feelings, opinions and choices matter too."
+  },
+  {
+   "id": "s3_1",
+   "who": "Sam",
+   "text": "Let me see your messages."
+  },
+  {
+   "id": "s3_2",
+   "who": "Jordan",
+   "text": "I'd rather keep my messages private."
+  },
+  {
+   "id": "s3_3",
+   "who": "Sam",
+   "text": "But if we're friends, you should show me."
+  },
+  {
+   "id": "s3_4",
+   "who": "Jordan",
+   "text": "Being friends doesn't mean I have to give up my privacy."
+  },
+  {
+   "id": "s3_6",
+   "who": "Sam",
+   "text": "Fair enough."
+  },
+  {
+   "id": "s3_8",
+   "who": "N",
+   "text": "Everyone has boundaries. That could mean needing personal space, keeping something private, or saying no to something you're uncomfortable with."
+  },
+  {
+   "id": "s3_9",
+   "who": "N",
+   "text": "And remember: No means no. You don't have to feel guilty for setting a boundary."
+  },
+  {
+   "id": "s4_1",
+   "who": "Alex",
+   "text": "Come on, just do it. Everyone else is."
+  },
+  {
+   "id": "s4_2",
+   "who": "Maya",
+   "text": "I don't want to."
+  },
+  {
+   "id": "s4_3",
+   "who": "Alex",
+   "text": "Seriously? Don't be boring."
+  },
+  {
+   "id": "s4_5",
+   "who": "N",
+   "text": "Pressure isn't respect."
+  },
+  {
+   "id": "s4_6",
+   "who": "N",
+   "text": "You should never have to do something just to keep a friend, impress someone or prove that you care."
+  },
+  {
+   "id": "s5_1",
+   "who": "Jordan",
+   "text": "When you didn't invite me yesterday, I felt left out."
+  },
+  {
+   "id": "s5_2",
+   "who": "Sam",
+   "text": "I didn't realise you felt that way. I'm sorry."
+  },
+  {
+   "id": "s5_3",
+   "who": "Jordan",
+   "text": "Thanks for listening."
+  },
+  {
+   "id": "s5_5",
+   "who": "N",
+   "text": "Good communication doesn't mean you never disagree."
+  },
+  {
+   "id": "s5_6",
+   "who": "N",
+   "text": "It means being honest about how you feel, listening to the other person and trying to solve problems without insulting, threatening or humiliating each other."
+  },
+  {
+   "id": "s6_1",
+   "who": "N",
+   "text": "Sometimes, a relationship can become unhealthy."
+  },
+  {
+   "id": "s6_2",
+   "who": "N",
+   "text": "Checking your phone or messages without asking"
+  },
+  {
+   "id": "s6_3",
+   "who": "N",
+   "text": "Telling you who you can and can't see"
+  },
+  {
+   "id": "s6_4",
+   "who": "N",
+   "text": "Put-downs and “jokes” that hurt"
+  },
+  {
+   "id": "s6_5",
+   "who": "N",
+   "text": "Making you feel guilty for saying no"
+  },
+  {
+   "id": "s6_6",
+   "who": "N",
+   "text": "Jealousy, anger or threats when you disagree"
+  },
+  {
+   "id": "s6_7",
+   "who": "N",
+   "text": "Pressure to “prove” that you care"
+  },
+  {
+   "id": "end_0",
+   "who": "N",
+   "text": "Respect is the relationship. If something doesn't feel right, talk to someone you trust: a friend, family member, teacher or school counsellor."
+  }
+ ],
+ "starts": [
+  {
+   "id": "title_0",
+   "start": 1
+  },
+  {
+   "id": "s1_1",
+   "start": 8
+  },
+  {
+   "id": "s1_2",
+   "start": 13.029
+  },
+  {
+   "id": "s1_3",
+   "start": 14.956
+  },
+  {
+   "id": "s1_4",
+   "start": 18.037000000000003
+  },
+  {
+   "id": "s1_5",
+   "start": 20.889
+  },
+  {
+   "id": "s1_7",
+   "start": 29.268000000000004
+  },
+  {
+   "id": "s2_1",
+   "start": 39.26400000000001
+  },
+  {
+   "id": "s2_2",
+   "start": 43.03300000000001
+  },
+  {
+   "id": "s2_4",
+   "start": 47.42500000000001
+  },
+  {
+   "id": "s2_6",
+   "start": 56.248000000000005
+  },
+  {
+   "id": "s3_1",
+   "start": 65.22300000000001
+  },
+  {
+   "id": "s3_2",
+   "start": 68.266
+  },
+  {
+   "id": "s3_3",
+   "start": 71.653
+  },
+  {
+   "id": "s3_4",
+   "start": 75.438
+  },
+  {
+   "id": "s3_6",
+   "start": 81.51
+  },
+  {
+   "id": "s3_8",
+   "start": 86.15700000000001
+  },
+  {
+   "id": "s3_9",
+   "start": 95.09400000000001
+  },
+  {
+   "id": "s4_1",
+   "start": 102.556
+  },
+  {
+   "id": "s4_2",
+   "start": 105.917
+  },
+  {
+   "id": "s4_3",
+   "start": 108.41000000000001
+  },
+  {
+   "id": "s4_5",
+   "start": 112.53500000000001
+  },
+  {
+   "id": "s4_6",
+   "start": 115.381
+  },
+  {
+   "id": "s5_1",
+   "start": 123.944
+  },
+  {
+   "id": "s5_2",
+   "start": 127.95
+  },
+  {
+   "id": "s5_3",
+   "start": 132.18099999999998
+  },
+  {
+   "id": "s5_5",
+   "start": 135.564
+  },
+  {
+   "id": "s5_6",
+   "start": 139.623
+  },
+  {
+   "id": "s6_1",
+   "start": 151.05599999999998
+  },
+  {
+   "id": "s6_2",
+   "start": 155.006
+  },
+  {
+   "id": "s6_3",
+   "start": 158.423
+  },
+  {
+   "id": "s6_4",
+   "start": 161.21099999999998
+  },
+  {
+   "id": "s6_5",
+   "start": 163.98499999999999
+  },
+  {
+   "id": "s6_6",
+   "start": 166.933
+  },
+  {
+   "id": "s6_7",
+   "start": 170.28
+  },
+  {
+   "id": "end_0",
+   "start": 175.626
+  }
+ ],
+ "sfx": [
+  {
+   "type": "pop",
+   "t": 24.268
+  },
+  {
+   "type": "pop",
+   "t": 29.068000000000005
+  },
+  {
+   "type": "pop",
+   "t": 47.22500000000001
+  },
+  {
+   "type": "pop",
+   "t": 49.848000000000006
+  },
+  {
+   "type": "freeze",
+   "t": 45.925000000000004
+  },
+  {
+   "type": "pop",
+   "t": 83.557
+  },
+  {
+   "type": "pop",
+   "t": 85.95700000000001
+  },
+  {
+   "type": "pop",
+   "t": 94.894
+  },
+  {
+   "type": "pop",
+   "t": 115.181
+  },
+  {
+   "type": "freeze",
+   "t": 111.035
+  },
+  {
+   "type": "pop",
+   "t": 135.364
+  },
+  {
+   "type": "flag",
+   "t": 154.656
+  },
+  {
+   "type": "flag",
+   "t": 158.073
+  },
+  {
+   "type": "flag",
+   "t": 160.861
+  },
+  {
+   "type": "flag",
+   "t": 163.635
+  },
+  {
+   "type": "flag",
+   "t": 166.583
+  },
+  {
+   "type": "flag",
+   "t": 169.93
+  }
+ ],
+ "scenes": [
+  {
+   "id": "title",
+   "start": 0,
+   "dur": 5.6,
+   "bg": "brand"
+  },
+  {
+   "id": "s1",
+   "start": 5.6,
+   "dur": 32.264,
+   "bg": "courtyard"
+  },
+  {
+   "id": "s2",
+   "start": 37.864000000000004,
+   "dur": 25.359,
+   "bg": "corridor"
+  },
+  {
+   "id": "s3",
+   "start": 63.223000000000006,
+   "dur": 38.032999999999994,
+   "bg": "classroom"
+  },
+  {
+   "id": "s4",
+   "start": 101.256,
+   "dur": 21.088,
+   "bg": "courtyard"
+  },
+  {
+   "id": "s5",
+   "start": 122.344,
+   "dur": 27.912000000000003,
+   "bg": "sunset"
+  },
+  {
+   "id": "s6",
+   "start": 150.256,
+   "dur": 24.870000000000005,
+   "bg": "dark"
+  },
+  {
+   "id": "end",
+   "start": 175.126,
+   "dur": 8.746,
+   "bg": "brand"
+  }
+ ],
+ "total": 183.872
+}
