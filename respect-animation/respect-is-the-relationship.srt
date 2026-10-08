@@ -1,111 +1,143 @@
 1
-00:00:07,800 --> 00:00:12,120
-ALEX: Okay, serious question. What actually makes a relationship healthy?
+00:00:00,000 --> 00:00:05,450
+NARRATOR: Respect is the relationship.
 
 2
-00:00:12,270 --> 00:00:14,220
-SAM: Trust?
+00:00:07,800 --> 00:00:12,679
+ALEX: Okay, serious question. What actually makes a relationship healthy?
 
 3
-00:00:14,370 --> 00:00:17,170
-MAYA: Not arguing all the time?
+00:00:12,829 --> 00:00:14,606
+SAM: Trust?
 
 4
-00:00:17,320 --> 00:00:20,120
-JORDAN: Being able to be yourself?
+00:00:14,756 --> 00:00:17,687
+MAYA: Not arguing all the time?
 
 5
-00:00:20,270 --> 00:00:24,210
-ALEX: Exactly. But what does that actually look like?
+00:00:17,837 --> 00:00:20,539
+JORDAN: Being able to be yourself?
 
 6
-00:00:29,160 --> 00:00:37,030
-NARRATOR: Relationships aren't just about dating. They include friendships, family relationships, classmates and people we care about.
+00:00:20,689 --> 00:00:24,118
+ALEX: Exactly. But what does that actually look like?
 
 7
-00:00:39,180 --> 00:00:43,120
-MAYA: Sorry, I don't really feel like coming today.
+00:00:29,068 --> 00:00:36,914
+NARRATOR: Relationships aren't just about dating. They include friendships, family relationships, classmates and people we care about.
 
 8
-00:00:43,270 --> 00:00:46,070
-SAM: That's okay. Maybe another time.
+00:00:39,064 --> 00:00:42,683
+MAYA: Sorry, I don't really feel like coming today.
 
 9
-00:00:47,520 --> 00:00:49,970
-NARRATOR: First: respect.
+00:00:42,833 --> 00:00:45,775
+SAM: That's okay. Maybe another time.
 
 10
-00:00:56,320 --> 00:01:02,510
-NARRATOR: Respect means understanding that someone else's feelings, opinions and choices matter too.
+00:00:47,225 --> 00:00:49,698
+NARRATOR: First: respect.
 
 11
-00:01:05,260 --> 00:01:08,060
-SAM: Let me see your messages.
+00:00:56,048 --> 00:01:02,273
+NARRATOR: Respect means understanding that someone else's feelings, opinions and choices matter too.
 
 12
-00:01:08,210 --> 00:01:11,390
-JORDAN: I'd rather keep my messages private.
+00:01:05,023 --> 00:01:07,916
+SAM: Let me see your messages.
 
 13
-00:01:11,540 --> 00:01:15,480
-SAM: But if we're friends, you should show me.
+00:01:08,066 --> 00:01:11,303
+JORDAN: I'd rather keep my messages private.
 
 14
-00:01:15,630 --> 00:01:20,710
-JORDAN: Being friends doesn't mean I have to give up my privacy.
+00:01:11,453 --> 00:01:15,088
+SAM: But if we're friends, you should show me.
 
 15
-00:01:22,760 --> 00:01:24,710
-SAM: Fair enough.
+00:01:15,238 --> 00:01:19,260
+JORDAN: Being friends doesn't mean I have to give up my privacy.
 
 16
-00:01:27,260 --> 00:01:36,810
-NARRATOR: Everyone has boundaries. That could mean needing personal space, keeping something private, or saying no to something you're uncomfortable with.
+00:01:21,310 --> 00:01:23,407
+SAM: Fair enough.
 
 17
-00:01:36,960 --> 00:01:44,410
-NARRATOR: And remember: No means no. You don't have to feel guilty for setting a boundary.
+00:01:25,957 --> 00:01:34,744
+NARRATOR: Everyone has boundaries. That could mean needing personal space, keeping something private, or saying no to something you're uncomfortable with.
 
 18
-00:01:46,460 --> 00:01:50,400
-ALEX: Come on, just do it. Everyone else is.
+00:01:34,894 --> 00:01:40,306
+NARRATOR: And remember: No means no. You don't have to feel guilty for setting a boundary.
 
 19
-00:01:50,550 --> 00:01:52,970
-MAYA: I don't want to.
+00:01:42,356 --> 00:01:45,567
+ALEX: Come on, just do it. Everyone else is.
 
 20
-00:01:53,120 --> 00:01:55,540
-ALEX: Seriously? Don't be boring.
+00:01:45,717 --> 00:01:48,060
+MAYA: I don't want to.
 
 21
-00:01:56,990 --> 00:01:59,440
-NARRATOR: Pressure isn't respect.
+00:01:48,210 --> 00:01:50,885
+ALEX: Seriously? Don't be boring.
 
 22
-00:01:59,590 --> 00:02:08,720
-NARRATOR: You should never have to do something just to keep a friend, impress someone or prove that you care.
+00:01:52,335 --> 00:01:55,031
+NARRATOR: Pressure isn't respect.
 
 23
-00:02:11,270 --> 00:02:15,970
-JORDAN: When you didn't invite me yesterday, I felt left out.
+00:01:55,181 --> 00:02:01,194
+NARRATOR: You should never have to do something just to keep a friend, impress someone or prove that you care.
 
 24
-00:02:16,120 --> 00:02:20,440
-SAM: I didn't realise you felt that way. I'm sorry.
+00:02:03,744 --> 00:02:07,600
+JORDAN: When you didn't invite me yesterday, I felt left out.
 
 25
-00:02:20,590 --> 00:02:22,630
-JORDAN: Thanks for listening.
+00:02:07,750 --> 00:02:11,831
+SAM: I didn't realise you felt that way. I'm sorry.
 
 26
-00:02:23,780 --> 00:02:27,870
-NARRATOR: Good communication doesn't mean you never disagree.
+00:02:11,981 --> 00:02:14,214
+JORDAN: Thanks for listening.
 
 27
-00:02:28,020 --> 00:02:39,670
-NARRATOR: It means being honest about how you feel, listening to the other person and trying to solve problems without insulting, threatening or humiliating each other.
+00:02:15,364 --> 00:02:19,273
+NARRATOR: Good communication doesn't mean you never disagree.
 
 28
-00:02:41,220 --> 00:02:44,870
+00:02:19,423 --> 00:02:29,306
+NARRATOR: It means being honest about how you feel, listening to the other person and trying to solve problems without insulting, threatening or humiliating each other.
+
+29
+00:02:30,856 --> 00:02:34,506
 NARRATOR: Sometimes, a relationship can become unhealthy.
+
+30
+00:02:34,656 --> 00:02:37,923
+NARRATOR: Checking your phone or messages without asking
+
+31
+00:02:38,073 --> 00:02:40,711
+NARRATOR: Telling you who you can and can't see
+
+32
+00:02:40,861 --> 00:02:43,485
+NARRATOR: Put-downs and “jokes” that hurt
+
+33
+00:02:43,635 --> 00:02:46,433
+NARRATOR: Making you feel guilty for saying no
+
+34
+00:02:46,583 --> 00:02:49,780
+NARRATOR: Jealousy, anger or threats when you disagree
+
+35
+00:02:49,930 --> 00:02:52,376
+NARRATOR: Pressure to “prove” that you care
+
+36
+00:02:55,126 --> 00:03:03,722
+NARRATOR: Respect is the relationship. If something doesn't feel right, talk to someone you trust: a friend, family member, teacher or school counsellor.
