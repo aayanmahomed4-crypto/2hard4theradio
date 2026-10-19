@@ -89,10 +89,31 @@ music *= 0.16  # quiet bed
 # ------------------------------------------------------------ voices
 voice = np.zeros(N)
 active = np.zeros(N)
+from scipy.signal import fftconvolve
+WHO = {l["id"]: l["who"] for l in meta["lines"]}
+BG = {sc["id"]: sc["bg"] for sc in meta["scenes"]}
+ROOM = {"courtyard": (0.35, 0.10), "corridor": (0.85, 0.20), "classroom": (0.5, 0.14), "sunset": (0.3, 0.08)}
+_irs = {}
+def room_ir(rt):
+    if rt not in _irs:
+        n = int(rt * SR)
+        tt = np.arange(n) / SR
+        ir = rng.standard_normal(n) * np.exp(-6.9 * tt / rt)
+        ir = lowpass(ir, 5000)
+        ir[: int(0.012 * SR)] = 0  # pre-delay
+        _irs[rt] = ir / np.sqrt(np.sum(ir ** 2))
+    return _irs[rt]
+
 for vs in meta["starts"]:
     a, sr = sf.read(os.path.join(D, "voice", vs["id"] + ".wav"), dtype="float32")
     if sr != SR:
         a = resample_poly(a, SR, sr)
+    room = ROOM.get(BG.get(vs["id"].split("_")[0], ""))
+    if WHO.get(vs["id"]) not in (None, "N") and room:
+        rt, wet = room
+        tail = fftconvolve(a, room_ir(rt))
+        dry = np.concatenate([a, np.zeros(len(tail) - len(a))])
+        a = dry * (1 - wet * 0.5) + tail * wet
     s0 = int(vs["start"] * SR)
     a = a[: max(0, N - s0)]
     voice[s0:s0 + len(a)] += a * 0.9
